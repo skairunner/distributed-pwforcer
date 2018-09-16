@@ -1,0 +1,58 @@
+SKYE IM ki539
+
+File listing
+./
+|____src/
+| |____testpwhelper.c
+| |____server.c
+| |____simplesockets.c
+| |____threads-vs-signals.c
+| |____bounded-buffer.c
+| |____packets.c
+| |____client.c
+| |____passwordhelper.c
+|____Makefile
+|____README
+|____im.skye.ki539.report.pdf
+|____obj/
+|____output.txt
+|____PwChecker/
+| |____SHA2/
+| | |____CMakeLists.txt
+| | |____sha2.c
+| | |____sha2.h
+| |____CMakeLists.txt
+| |____Makefile
+| |____obj/
+| | |____pw_checker.o
+| | |____sha2_obj.o
+| | |____sha2_wrapper.o
+| |____sha2_wrapper.o
+| |____sha2_wrapper.c
+| |____sha2_wrapper.h
+| |____pw_checker.h
+| |____pw_checker.c
+| |____lib/
+| | |____libpwchecker.a
+|____include/
+| |____passwordhelper.h
+| |____simplesockets.h
+| |____packets.h
+| |____pw_checker.h
+|____input.txt
+|____bin/
+| |____server
+| |____client
+|____lib/
+| |____libpwchecker.a
+
+The file input.txt is provided as an example input.
+
+make:
+	make crackerapps
+		Compiles server and client
+	make valgrind_client, make valgrind_server
+		Compiles and runs client or server under Valgrind.
+	make testclient, testserver
+		Compiles and runs client or server with test inputs.
+
